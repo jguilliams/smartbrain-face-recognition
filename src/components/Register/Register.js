@@ -28,7 +28,7 @@ class Register extends Component {
   };
 
   onSubmitRegister = () => {
-    fetch("http://localhost:3000/register", {
+    fetch("https://salty-beach-40180.herokuapp.com/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -134,9 +134,9 @@ class Register extends Component {
               </p>
             </div>
             {alreadyRegistered && (
-              <div className="lh-copy mt3">
-                <p className="f6 fw6 red db">
-                  You are already registered! Please sign in!
+              <div className="lh-copy ba bw2 b--dark-red mt3 bg-light-red f6 fw8 dark-red db">
+                <p className="f6 fw8 dark-red db">
+                  Error: Unable to register! You may already be registered! If so, please sign in!
                 </p>
               </div>
             )}

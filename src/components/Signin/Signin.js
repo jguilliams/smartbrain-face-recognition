@@ -23,7 +23,7 @@ class Signin extends Component {
   };
 
   onSubmitSignIn = () => {
-    fetch("http://localhost:3000/signin", {
+    fetch("https://salty-beach-40180.herokuapp.com/signin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -115,9 +115,9 @@ class Signin extends Component {
               </p>
             </div>
             {signInFailed && (
-              <div className="lh-copy mt3">
-                <p className="f6 fw6 red db">
-                  User not found! Please register!
+              <div className="lh-copy ba bw2 b--dark-red mt3 bg-light-red f6 fw8 dark-red db">
+                <p className="f6 fw8 dark-red db">
+                  Error: Unable to sign in! You may not be registered! If so, please register!
                 </p>
               </div>
             )}
